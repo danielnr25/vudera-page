@@ -213,62 +213,253 @@ hr {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
 }
 
+
+
+/* ======= ABOUT --- MAIN ABOUT ======== */
+
+.main__about{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 0.5rem;
+}
+
+.main__container{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.main__container--datos h2{
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -.025em;
+  color: rgba(255, 255, 255, var(--bg-opacity));
+}
+
+.main__container--datos h2 span{
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: inherit;
+  max-width: 437px;
+}
+
+.main__description{
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  color: #a1a1aa;
+}
+
+.main__description p{
+  margin-bottom: 1rem;
+}
+
+.main__container--img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 0rem 0rem 4.3rem;
+}
+
+img{
+  object-fit: cover;
+}
+
+.main__container--img .main__picture img{
+  justify-content: center;
+  align-items: center;
+  margin-top: -1.8rem;
+  width: 500px;
+  height: 450px;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.card__author{
+  margin-top: 1rem;
+  color:#a1a1aa;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-right: 10.7rem;
+}
+
+/* ======= CONTACTO ======= */
+.formulario{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 30rem;
+  padding: 2rem;
+  margin: auto;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.formulario label{
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-texto);
+}
+
+.formulario input{
+  padding: .8rem;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  outline: none;
+}
+
+.formulario textarea{
+  padding: 0.8rem;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  outline: none;
+}
+
+.formulario input::placeholder{
+  color: #a1a1aa;
+}
+
+.btn__submit{
+  margin-top: 1rem;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn__submit:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
+  transition: all 0.2s ease;
+}
+
+
+
+/* .formulario:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
+  transition: all 0.2s ease;
+} */
 /* ========= MEDIA QUERYS ========= */
 
 @media screen and (max-width: 768px) {
+  .titulo {
+    font-size: 1.7rem;
+  }
+  .menu__list {
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+  }
 
-   .titulo{
-      font-size: 1.7rem;
-   }
-   .menu__list {
-      margin: 0;
-      padding: 0;
-      gap: 1rem;
-   }
+  .menu__link {
+    font-size: 1rem;
+  }
 
-   .menu__link {
-      font-size: 1rem;
-   }
+  .main__about{
+    padding: 1rem;
+  }
 
-   .main__picture {
-      flex-direction: column;
-   }
+  .main__container{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 
-   .main__picture img {
-      margin-bottom: 1rem;
-      width: 95%;
-      height: 100%;
-   }
+  .main__container--datos h2{
+    font-size: 1.5rem;
+    text-align: center;
+  }
 
-   .main__section {
-      flex-direction: column;
-   }
+  .main__container--datos h2 span{
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: inherit;
+    max-width: 437px;
+  }
 
-   .card__section {
-      grid-template-columns: repeat(1, minmax(0, 1fr));
-   }
+  .main__description{
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    color: #a1a1aa;
+  }
 
-   .card__part {
-      margin-bottom: 0rem;
-   }
+  .main__description p{
+    margin-bottom: 1rem;
+  }
 
-   .title__section {
-      font-size: 1.5rem;
-      margin: 0;
-   }
-   .texto__section{
-      font-size: 1rem;
-      line-height: 1.6rem;
-   }
+  .main__container--img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 0rem 0rem 0rem;
+  }
 
-   .card__section .card__title {
-      font-size: 1.3rem;
-   }
-   .card__section .texto__section {
-      margin: 0;
-   }
+  .main__container--img .main__picture img{
+    justify-content: center;
+    align-items: center;
+    margin-top: -1.2rem;
+    width: 350px;
+    height: 350px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  }
 
-   .footer__content {
-      flex-direction: column;
-   }
+  .main__picture {
+    flex-direction: column;
+  }
+
+  .main__picture img {
+    margin-bottom: 1rem;
+    width: 95%;
+    height: 100%;
+  }
+
+  .main__section {
+    flex-direction: column;
+  }
+
+  .card__section {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .card__part {
+    margin-bottom: 0rem;
+  }
+
+  .title__section {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  .texto__section {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  .card__author{
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-right: 0rem;
+  }
+  
+
+  .card__section .card__title {
+    font-size: 1.3rem;
+  }
+  .card__section .texto__section {
+    margin: 0;
+  }
+
+  .footer__content {
+    flex-direction: column;
+  }
 }
